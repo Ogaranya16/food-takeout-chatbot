@@ -60,10 +60,10 @@ io.on("connection", (socket) => {
       userName = message;
       sendBotMessage(
         `Welcome to the Grilz 'n' Barz, ${userName}!
-        Select 1 to place order <br>
-        Select99 to checkout order. <br>
-        Select 98 to see order History. <br>
-        Select 97 to view current order. <br>
+        Select 1 to place order 
+        Select99 to checkout order. 
+        Select 98 to see order History. 
+        Select 97 to view current order. 
         Select 0 to Cancel order`
       );
     } else {
