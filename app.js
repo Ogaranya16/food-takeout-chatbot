@@ -89,7 +89,7 @@ io.on("connection", (socket) => {
             const selectedItem = menuList[selectedIndex];
             socket.request.session.currentOrder.push(selectedItem);
             sendBotMessage(
-              `${selectedItem} has been added to your order. type 99 to checkout.`
+              `${selectedItem} has been added to your order. Do you want to order more, type 99 to checkout.`
             );
           } else {
             sendBotMessage("Invalid selection.");
@@ -97,7 +97,7 @@ io.on("connection", (socket) => {
           break;
         case "99":
           if (socket.request.session.currentOrder.length === 0) {
-            sendBotMessage("No order to place. select 1 to See menu");
+            sendBotMessage("No order to place. select 1 to get today's menu");
           } else {
             orderHistory.push(socket.request.session.currentOrder);
             sendBotMessage("Order placed");
@@ -120,10 +120,9 @@ io.on("connection", (socket) => {
 
         case "97":
           if (socket.request.session.currentOrder.length === 0) {
-            sendBotMessage("No current order. send 1 See menu");
+            sendBotMessage("No current order. send 1 to get todays menu");
           } else {
-            const currentOrderString =
-              socket.request.session.currentOrder.join(", ");
+            const currentOrderString = socket.request.session.currentOrder.join(", ");
             sendBotMessage(`Here is your current order: ${currentOrderString}`);
           }
           break;
