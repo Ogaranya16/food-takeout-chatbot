@@ -1,0 +1,92 @@
+
+body { 
+    margin: 0; 
+    /*padding-bottom: 3rem;  */
+    background: lavenderblush;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+.app {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #555;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.header {
+    background: #111;
+    height: 50px;
+    display: flex;
+    width: 93%;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.header .logo {
+    font-size: 16px;
+    color: #eee;
+    font-weight: 600;
+}
+
+#form{ 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 0.25rem; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex; 
+    height: 3rem; 
+    box-sizing: border-box; 
+    backdrop-filter: blur(10px); 
+}
+#inputBox { 
+    border: none; 
+    padding: 0 1rem; 
+    flex-grow: 1;
+    border-radius: 2rem; 
+     margin: 0.25rem; 
+}
+#input:focus { 
+    outline: none; 
+}
+#form > button { 
+    background: #333; 
+    border: none; 
+    padding: 0 1rem; 
+    margin: 0.25rem; 
+    border-radius: 3px; 
+    outline: none; 
+    color: #fff; 
+}
+
+#messages { 
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #447a7dc5;
+    overflow: auto;
+}
+
+#messages #message {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    max-width: 50%;
+    background:  #111;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    padding: 10px;
+    color: #fff;
+}
+
+#messages > li {
+     padding: 0.5rem 1rem; 
+
+}
+#messages > li:nth-child(odd) { 
+    background: #efefef; 
+}
