@@ -89,7 +89,7 @@ io.on("connection", (socket) => {
             const selectedItem = menuList[selectedIndex];
             socket.request.session.currentOrder.push(selectedItem);
             sendBotMessage(
-              `${selectedItem} has been added to your order. Do you want to order more, type 99 to checkout.`
+              `${selectedItem} has been added to your order. Do you want to order more, or type 99 to checkout.`
             );
           } else {
             sendBotMessage("Invalid selection.");
