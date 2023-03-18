@@ -46,7 +46,9 @@ io.on("connection", (socket) => {
 
   // Ask for the user's name
   sendBotMessage("Hello! What's your name?");
-
+  
+  //lets define currentOrder
+  socket.request.session.currentOrder = [];
 
   // Define the user name
   let userName = "";
